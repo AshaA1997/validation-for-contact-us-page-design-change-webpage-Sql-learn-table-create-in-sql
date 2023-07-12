@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navbar</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="navbar1.css">
+    </head>
+     <body>
+        <div class="container">
+            <header class="list">
+                <div class="logo"></div>  
+                <img src="/logo.jpg" width:1% height:1%>
+                <h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">DREAM CARDS</h1>
+                <div class="list-item">
+                    <ul>
+                        <li> <a href="./about1.html">About us</a></li>
+                        <li> <a href="./login.html">Sign In</a></li>
+                        <li> <a href="./register.html">Register</a></li>
+                        <li style="margin-left: 100px;"> <a href="./contact.html">Contact us</a></li>
+                    </ul>
+                </div> 
+            </header>
+
+            <main class="main">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 5</div>
+                        <select>
+                          <option>Register Booking</option>
+                          <option>complaints</option>
+                        </select>
+                      </ul>
+                      <img src="images/wedding img2.jpg" style="width:100%">
+                      <div class="text">Caption Text</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 5</div>
+                      <img src="images/wedding img2.jpg" style="">
+                      <div class="text">Caption Two</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 5</div>
+                      <img src="images/wedding img2.jpg" style="width:100%">
+                      <div class="text">Caption Three</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 5</div>
+                        <img src="images/wedding img4.jpg" style="width:100%">
+                        <div class="text">Caption four</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">5 / 5</div>
+                        <img src="images/wedding img5.jpg" style="width:100%">
+                        <div class="text">Caption five</div>
+                    </div>  
+                    
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                      <span class="dot" onclick="currentSlide(4)"></span> 
+                      <span class="dot" onclick="currentSlide(5)"></span> 
+                    </div>
+                    
+                    
+            </main>
+
+            <footer style="background-color: #000;">
+                    <div class="footer-address">
+                        <div style="display: block;">
+                            <p>Kochi | Kerala</p>
+                            <div class="footer-icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-square-instagram"></i>
+                                <i class="fa-brands fa-square-twitter"></i> 
+                            </div>
+                        </div>
+                        <small style="margin-left:112px;">
+                            Copyright © 2023 Logo. All Rights Reserved.
+                        </small>
+                        <p>
+                            <ul>
+                                <li class="footer-list"> <a href="#">About Us</a></li>
+                                <li class="footer-list"> <a href="#">Sign In</a></li>
+                                <li class="footer-list"> <a href="#">Sign up</a></li>
+                                <li class="footer-list"> <a href="#">Contact us</a></li>
+                            </ul>
+                        </p>
+                        
+                    </div>
+            </footer>
+        </div>
+
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>
